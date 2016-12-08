@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+
+    <title>PureOHS Style Guide</title>
+
+    <!-- CSS - Bootstrap -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css">
+
+    <!-- CSS - Font Awesome -->
+    <link rel="stylesheet" href="font-awesome-4.4.0/css/font-awesome.min.css" type="text/css">
+
+    <!-- CSS - UI Grid -->
+    <link rel="stylesheet" href="node_modules/angular-ui-grid/ui-grid.min.css" type="text/css">
+
+	<!-- Font - Google -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Source+Sans+Pro:300,400,700" rel="stylesheet">
+
+
+  <!-- Select2 Files -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+
+	<!-- CSS - Select2 Bootstrap -->
+	<link rel="stylesheet" href="select2/select2-css-bootstrap3/select2-bootstrap.css" type="text/css">
+
+	<!-- CSS - PureOHS Custom -->
+	<link rel="stylesheet" href="styles/PureOHS-style-guide.css" type="text/css">
+	<link rel="stylesheet" href="styles/PureOHS-theme.css" type="text/css">
+
+    <!-- JS - UI Grid Default -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="http://ui-grid.info/docs/grunt-scripts/csv.js"></script>
+<script src="http://ui-grid.info/docs/grunt-scripts/pdfmake.js"></script>
+<script src="http://ui-grid.info/docs/grunt-scripts/vfs_fonts.js"></script>
+<script src="./node_modules/angular-ui-grid/ui-grid.js"></script>
+<script src="./node_modules/angular-ui-grid/ui-grid.css"></script>
+<script src="node_modules/angular-ui-grid/ui-grid.js"></script>
+
+    <!-- JS - UI Grid Custom -->
+    <script src="js/app.js"></script>
+
+</head>
+
+<body class="style-guide">
+
+	<!-- Fixed navbar -->
+	<nav class="navbar navbar-fixed-top">
+
+		<div class="pohs-nav-top-1">
+			<div class="container">
+
+				<div class="navbar-header">
+					<a class="navbar-brand" href="index.html"><img src="img/logo-PureOHS-white.svg" alt="PureOHS" height="18" width="89"></a>
+				</div>
+				<div id="navbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href class="navbar-brand right"><img src="img/logo-UL-white.svg" alt="PureOHS" height="28" width="28"></a></li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+	</nav>
+
+<div class="container">
+ <div class="row">
+	<div class="col-sm-2 col-md-2">
+				<div class="tabbable tabs-left">
+					<ul class="nav nav-pills nav-stacked">
+						<li role="presentation"><a href="index.html" id="left-nav">Typography</a></li>
+            <li role="presentation"><a href="colors.html" id="left-nav">Color Palette</a></li>
+  					<li role="presentation"><a href="icons.html" id="left-nav">Icons</a></li>
+  					<li role="presentation"><a href="form_elements.html" id="left-nav">Form Elements</a></li>
+            <li role="presentation" class="active"><a href="grid.html">Grid</a></li>
+						<li role="presentation"><a href="tabs.html" id="left-nav">Tabs</a></li>
+  					<li role="presentation"><a href="modal_dialog.html" id="left-nav">Modals</a></li>
+					</ul>
+				</div>
+	</div>
+
+	<div class="col-sm-10 col-md-10">
+		<h3>Grid System</h3>
+		 <div class="panel panel-default">
+			<div class="panel-body style-guide">
+				<div class="style-guide-example">
+					<div class="example text-uppercase">example</div>
+					 <div class="row show-grid">
+ 						<div class="col-sm-1 col-md-1">.col-sm-1 .col-md-1</div>
+ 						<div class="col-sm-1 col-md-1">.col-sm-1 .col-md-1</div>
+ 						<div class="col-sm-1 col-md-1">.col-sm-1 .col-md-1</div>
+ 						<div class="col-sm-1 col-md-1">.col-sm-1 .col-md-1</div>
+ 						<div class="col-sm-1 col-md-1">.col-sm-1 .col-md-1</div>
+ 						<div class="col-sm-1 col-md-1">.col-sm-1 .col-md-1</div>
+ 						<div class="col-sm-1 col-md-1">.col-sm-1 .col-md-1</div>
+ 						<div class="col-sm-1 col-md-1">.col-sm-1 .col-md-1</div>
+						<div class="col-sm-1 col-md-1">.col-sm-1 .col-md-1</div>
+ 						<div class="col-sm-1 col-md-1">.col-sm-1 .col-md-1</div>
+ 						<div class="col-sm-1 col-md-1">.col-sm-1 .col-md-1</div>
+ 						<div class="col-sm-1 col-md-1">.col-sm-1 .col-md-1</div>
+					 </div>
+
+					 <div class="row show-grid">
+ 						<div class="col-sm-2 col-md-2">.col-sm-2 .col-md-2</div>
+ 						<div class="col-sm-2 col-md-2">.col-sm-2 .col-md-2</div>
+ 						<div class="col-sm-2 col-md-2">.col-sm-2 .col-md-2</div>
+ 						<div class="col-sm-2 col-md-2">.col-sm-2 .col-md-2</div>
+ 						<div class="col-sm-2 col-md-2">.col-sm-2 .col-md-2</div>
+ 						<div class="col-sm-2 col-md-2">.col-sm-2 .col-md-2</div>
+					 </div>
+
+					 <div class="row show-grid">
+ 						<div class="col-sm-3 col-md-3">.col-sm-3 .col-md-3</div>
+ 						<div class="col-sm-3 col-md-3">.col-sm-3 .col-md-3</div>
+ 						<div class="col-sm-3 col-md-3">.col-sm-3 .col-md-3</div>
+ 						<div class="col-sm-3 col-md-3">.col-sm-3 .col-md-3</div>
+					 </div>
+
+					 <div class="row show-grid">
+						<div class="col-sm-4 col-md-4">.col-sm-4 .col-md-4</div>
+						<div class="col-sm-4 col-md-4">.col-sm-4 .col-md-4</div>
+						<div class="col-sm-4 col-md-4">.col-sm-4 .col-md-4</div>
+					 </div>
+
+					 <div class="row show-grid">
+						<div class="col-sm-5 col-md-5">.col-sm-5 .col-md-5</div>
+						<div class="col-sm-7 col-md-7">.col-sm-7 .col-md-7</div>
+					 </div>
+
+					 <div class="row show-grid">
+						<div class="col-sm-6 col-md-6">.col-sm-6 .col-md-6</div>
+						<div class="col-sm-6 col-md-6">.col-sm-6 .col-md-6</div>
+					 </div>
+
+					 <div class="row show-grid">
+						<div class="col-sm-7 col-md-7">.col-sm-7 .col-md-7</div>
+						<div class="col-sm-5 col-md-5">.col-sm-5 .col-md-5</div>
+					 </div>
+
+					<div class="row show-grid">
+ 					 <div class="col-sm-8 col-md-8">.col-sm-8 .col-md-8</div>
+ 					 <div class="col-sm-4 col-md-4">.col-sm-4 .col-md-4</div>
+					</div>
+
+					<div class="row show-grid">
+ 					 <div class="col-sm-9 col-md-9">.col-sm-9 .col-md-9</div>
+ 					 <div class="col-sm-3 col-md-3">.col-sm-3 .col-md-3</div>
+					</div>
+
+					<div class="row show-grid">
+ 					 <div class="col-sm-10 col-md-10">.col-sm-10 .col-md-10</div>
+ 					 <div class="col-sm-2 col-md-2">.col-sm-2 .col-md-2</div>
+					</div>
+
+					<div class="row show-grid">
+ 					 <div class="col-sm-11 col-md-11">.col-sm-11 .col-md-11</div>
+ 					 <div class="col-sm-1 col-md-1">.col-sm-1 .col-md-1</div>
+					</div>
+
+					<div class="row show-grid">
+ 					 <div class="col-sm-12 col-md-12">.col-sm-12 .col-md-12</div>
+					</div>
+
+				</div>
+		 <div class="col-md-7 col-sm-7">
+			 <h4 id="sample">Sample Code</h4>
+				<div class="style-guide-code">
+		<pre class="prettyprint">
+&lt;div class="container"&gt;
+&nbsp;&lt;div class="row"&gt;
+&nbsp;&nbsp;&lt;div class="col-sm-8 col-md-8"&gt;&lt;/div&gt;
+&nbsp;&nbsp;&lt;div class="col-sm-8 col-md-4"&gt;&lt;/div&gt;
+&nbsp;&lt;/div&gt;
+&nbsp;&lt;div class="row"&gt;
+&nbsp;&nbsp;&lt;div class="col-sm-4 col-md-4"&gt;&lt;/div&gt;
+&nbsp;&nbsp;&lt;div class="col-sm-4 col-md-4"&gt;&lt;/div&gt;
+&nbsp;&nbsp;&lt;div class="col-sm-4 col-md-4"&gt;&lt;/div&gt;
+&nbsp;&lt;/div&gt;
+&nbsp;&lt;div class="row"&gt;
+&nbsp;&nbsp;&lt;div class="col-sm-6 col-md-6"&gt;&lt;/div&gt;
+&nbsp;&nbsp;&lt;div class="col-sm-6 col-md-6"&gt;&lt;/div&gt;
+&nbsp;&lt;/div&gt;
+&lt;/div&gt;
+		</pre>
+			 </div>
+		 </div>
+
+				<div class="col-md-5 col-sm-5">
+					<h4 id="sample">Usage Guidelines</h4>
+					<ol><p id="guidelines">Each column div class needs to follow this pattern: <code>col-sm-x col-md-x</code>. This will ensure appropriate responsiveness on tablet devices.</p></ol>
+					<ol><p id="guidelines">Always use the <code>.container</code> fixed width class. The <code>.container-fluid</code> class is not used in PureOHS.</p></ol>
+				</div>
+			</div>
+		</div>
+
+        <h3>Data Tables</h3>
+				<div class="panel panel-default">
+					<div class="panel-body style-guide">
+						<div class="style-guide-example">
+							<div class="example text-uppercase">example</div>
+							<img src="img/encounters_grid1.png" id="grid">
+						</div>
+
+				 <div class="col-md-7 col-sm-7">
+					 <h4 id="sample">Sample Code</h4>
+						<div class="style-guide-code">
+				<pre class="prettyprint">
+&lt;div ul-auto-height&gt;
+ &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul-grid source="{{ 'main.test.person.grid' | ulApiUrl : { sort: $ulGrid.params.sort, skip: $ulGrid.params.skip, top: $ulGrid.params.top} }}" paging=""&gt;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;columns key="ObjectId"&gt;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;column field="GivenName" width="170" header="First Name"&gt;&lt;/column&gt;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;column field="FamilyName" header="Last Name" sort-priority="0" sort-direction="asc"&gt;&lt;/column&gt;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;column field="EmployeeID" pin="right"&gt;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="{{ '/employee/' + $it.EmployeeID }}"&gt;{{ $it.EmployeeID }}&lt;/a&gt;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/column&gt;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;column field="GovernmentID" sortable="false" pin="left"&gt;&lt;/column&gt;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;column field="DateOfBirth"&gt;&lt;/column&gt;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;column field="CompanyName"&gt;&lt;/column&gt;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;column field="IsActive" header="Active"&gt;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="checkbox" ng-model="$it.IsActive" disabled="" /&gt;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/column&gt;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/columns&gt;
+ &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul-grid&gt;
+&lt;/div&gt;
+
+				</pre>
+					 </div>
+				 </div>
+
+						<div class="col-md-5 col-sm-5">
+							<h4 id="sample">Usage Guidelines</h4>
+							<ol><p id="guidelines">Each grid should have a clickable link to dive into the CRUD aspects of the work section.</p></ol>
+							<ol><p id="guidelines">All action items should be housed in a pinned right-side column. Icon links are preferrable in those sections.</p></ol>
+							<ol><p id="guidelines">Column headers that are sorted should have a caret indicator next to the text.</p></ol>
+							<ol><p id="guidelines">Column headers color is <code>color: #9B9B9B</code> and non-link text color is <code>color: #222</code>.</p></ol>
+						</div>
+					</div>
+				</div>
+
+				<h3>Panels</h3>
+				<div class="panel panel-default">
+					<div class="panel-body style-guide">
+						<div class="style-guide-example">
+							<div class="example text-uppercase">example</div>
+							<h4>Sample header inside panel</h4>
+							<div class="col-sm-4 col-md-4 form-group">
+									<label class="control-label required">Sample Required Field</label>
+									<input type="" class="form-control" placeholder="">
+								</div>
+								<div class="col-sm-4 col-md-4 form-group">
+										<label class="control-label">Sample Label</label>
+										<input type="" class="form-control" placeholder="">
+									</div>
+									<div class="col-sm-4 col-md-4 form-group">
+											<label class="control-label">Another Label</label>
+											<input type="" class="form-control" placeholder="">
+										</div>
+							<br>
+							<br>
+						</div>
+				 <div class="col-md-7 col-sm-7">
+					 <h4 id="sample">Sample Code</h4>
+						<div class="style-guide-code">
+				<pre class="prettyprint">
+&lt;div class="container"&gt;
+&nbsp;&lt;div class="row"&gt;
+&nbsp;&nbsp;&nbsp;&lt;div class="col-sm-12 col-md-12"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="panel panel-default"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="panel-body"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Panel content here
+&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&lt;/div&gt;
+&lt;/div&gt;
+				</pre>
+					 </div>
+				 </div>
+
+						<div class="col-md-5 col-sm-5">
+							<h4 id="sample">Usage Guidelines</h4>
+							<ol><p id="guidelines">Panel headers should sit above the panel as an <code>h3</code> (as shown above). Any additional headers should be inside the panel as an <code>h4</code>.</p></ol>
+							<ol><p id="guidelines">Do not capitalize in title case except as the first word: "for", "the", "a", "an", "in", "of", "on".</p></ol>
+							<ol><p id="guidelines">Each panel should have this styling applied: <code>box-shadow: 0px 0px 3px 0px #AAAAAA</code>.</p></ol>
+						</div>
+					</div>
+				</div>
+    	</div>
+  	</div>
+	</div>
+ </div>
+</div>
+
+    <!-- Bootstrap core JavaScript -->
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+    <script type="text/javascript">
+			'use strict';
+
+      $(document).ready(function(){
+    $('.select2').select2();
+      });
+
+
+    </script>
+
+</body>
+</html>

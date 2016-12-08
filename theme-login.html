@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+
+    <title>PureOHS</title>
+
+    <!-- CSS - Bootstrap -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css">
+
+    <!-- CSS - Font Awesome -->
+    <link rel="stylesheet" href="font-awesome-4.4.0/css/font-awesome.min.css" type="text/css">
+
+    <!-- CSS - UI Grid -->
+    <link rel="stylesheet" href="ui-grid/ui-grid.min.css" type="text/css">
+	
+	<!-- Font - Google -->
+	<link href='http://fonts.googleapis.com/css?family=Roboto:100,300,400' rel='stylesheet' type='text/css'>
+	
+	<!-- CSS - Select2 -->
+	<link rel="stylesheet" href="select2/select2-3.5.2/select2.css" type="text/css">
+	
+	<!-- CSS - Select2 Bootstrap -->
+	<link rel="stylesheet" href="select2/select2-css-bootstrap3/select2-bootstrap.css" type="text/css">
+	
+	<!-- CSS - PureOHS Custom -->
+	<link rel="stylesheet" href="styles/PureOHS-theme.css" type="text/css">
+    
+    <!-- JS - UI Grid Default -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-touch.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-animate.js"></script>
+    <script src="http://ui-grid.info/docs/grunt-scripts/csv.js"></script>
+    <script src="http://ui-grid.info/docs/grunt-scripts/pdfmake.js"></script>
+    <script src="http://ui-grid.info/docs/grunt-scripts/vfs_fonts.js"></script>
+    <script src="ui-grid/ui-grid.js"></script>
+    
+    <!-- JS - UI Grid Custom -->
+    <script src="js/app.js"></script>
+
+</head>
+
+<body class="login">
+	
+	<div class="help">
+		<a href=""><i class="fa fa-question-circle fa-lg"></i></a>
+	</div>
+
+	<div class="container">
+		
+		<div class="panel panel-default">
+			<div class="panel-body">
+
+				<div class="logo">
+					<img src="img/logo-PureOHS-blue.svg" alt="PureOHS" height="24" width="118">
+				</div>
+                
+                <div class="form-group">
+					<label class="control-label">Organization</label>
+					<input type="text" class="form-control" placeholder="">
+				</div>
+
+				<div class="form-group">
+					<label class="control-label">Username</label>
+					<input type="text" class="form-control" placeholder="">
+				</div>
+
+				<div class="form-group">
+					<label class="control-label">Password</label>
+					<input type="password" class="form-control" placeholder="">
+				</div>
+
+				<div class="pull-right">
+					<a class="btn btn-primary" href="theme-dashboard.html" role="button">Sign In</a>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="footer">
+			<img src="img/logo-UL-grey.svg" alt="UL" height="28" width="28">
+			PureOHS v1.0.0+1486
+		</div>
+		
+    </div>
+
+
+    <!-- Bootstrap core JavaScript -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="//select2.github.io/select2/select2-3.5.2/select2.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+	
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+	
+	<script type="text/javascript">
+        $(document).ready(function(){
+			$('.select2').select2();
+        });
+    </script>
+
+</body>
+</html>

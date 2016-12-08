@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+
+    <title>PureOHS Style Guide</title>
+
+    <!-- CSS - Bootstrap -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css">
+
+    <!-- CSS - Font Awesome -->
+    <link rel="stylesheet" href="font-awesome-4.4.0/css/font-awesome.min.css" type="text/css">
+
+    <!-- CSS - UI Grid -->
+    <link rel="stylesheet" href="node_modules/angular-ui-grid/ui-grid.min.css" type="text/css">
+
+	<!-- Font - Google -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Source+Sans+Pro:300,400,700" rel="stylesheet">
+
+	<!-- CSS - Select2 -->
+	<link rel="stylesheet" href="select2/select2-3.5.2/select2.css" type="text/css">
+
+	<!-- CSS - Select2 Bootstrap -->
+	<link rel="stylesheet" href="select2/select2-css-bootstrap3/select2-bootstrap.css" type="text/css">
+
+	<!-- CSS - PureOHS Custom -->
+	<link rel="stylesheet" href="styles/PureOHS-style-guide.css" type="text/css">
+	<link rel="stylesheet" href="styles/PureOHS-theme.css" type="text/css">
+
+</head>
+
+<body class="style-guide">
+
+	<!-- Fixed navbar -->
+	<nav class="navbar navbar-fixed-top">
+
+		<div class="pohs-nav-top-1">
+			<div class="container">
+
+				<div class="navbar-header">
+					<a class="navbar-brand" href="index.html"><img src="img/logo-PureOHS-white.svg" alt="PureOHS" height="18" width="89"></a>
+				</div>
+				<div id="navbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href class="navbar-brand right"><img src="img/logo-UL-white.svg" alt="PureOHS" height="28" width="28"></a></li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+	</nav>
+
+<div class="container">
+ <div class="row">
+	<div class="col-sm-2 col-md-2">
+				<div class="tabbable tabs-left">
+					<ul class="nav nav-pills nav-stacked">
+						<li role="presentation"><a href="index.html" id="left-nav">Typography</a></li>
+						<li role="presentation"><a href="colors.html" id="left-nav">Color Palette</a></li>
+						<li role="presentation"><a href="icons.html" id="left-nav">Icons</a></li>
+						<li role="presentation"><a href="form_elements.html" id="left-nav">Form Elements</a></li>
+						<li role="presentation"><a href="grid.html" id="left-nav">Grid</a></li>
+						<li role="presentation"><a href="tabs.html" id="left-nav">Tabs</a></li>
+						<li role="presentation" class="active"><a href="modal_dialog.html">Modals</a></li>
+					</ul>
+				</div>
+	</div>
+
+
+ <div class="col-sm-10 col-md-10">
+  <h3>Modals</h3>
+    <div class="panel panel-default">
+      <div class="panel-body style-guide">
+        <div class="style-guide-example">
+          <div class="example text-uppercase">example</div>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="margin-bottom: 15px;">
+          Sample modal</button>
+				</div>
+
+ <div class="col-md-7 col-sm-7">
+	<h4 id="icon">Sample Code</h4>
+	<div class="style-guide-code">
+	 <pre class="prettyprint">
+&lt;!-- Button trigger modal --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-toggle=&quot;modal&quot; data-target=&quot;#myModal&quot;&gt;
+ Sample modal
+&lt;/button&gt;
+
+&lt;!-- Modal --&gt;
+&lt;div class=&quot;modal fade&quot; id=&quot;myModal&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-labelledby=&quot;myModalLabel&quot;&gt;
+ &lt;div class=&quot;modal-dialog&quot; role=&quot;document&quot;&gt;
+  &lt;div class=&quot;modal-content&quot;&gt;
+   &lt;div class=&quot;modal-header&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;&lt;/button&gt;
+	 &lt;h4 class=&quot;modal-title&quot; id=&quot;myModalLabel&quot;&gt;Modal title&lt;/h4&gt;
+	 &lt;/div&gt;
+
+&lt;div class=&quot;modal-body&quot;&gt;
+	 ...
+&lt;/div&gt;
+
+&lt;div class=&quot;modal-footer&quot;&gt;
+ &lt;button type=&quot;button&quot; class=&quot;btn btn-link&quot;&gt;Close&lt;/button&gt;
+ &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot;&gt;Save&lt;/button&gt;
+&lt;/div&gt;
+  &lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+		</pre>
+	</div>
+ </div>
+
+ <div class="col-md-5 col-sm-5">
+	 <h4 id="icon">Usage Guidelines</h4>
+	 <ol><p id="guidelines">Modals should be used as a way to get the user to enter information in quickly before continuing. </p></ol>
+	 <ol><p id="guidelines">Do not suddenly open modals without having the user interact with the page.</p></ol>
+	 <ol><p id="guidelines">Darken the page behind the modal window.</p></ol>
+	 <ol><p id="guidelines">Allow the user a clear path to close the modal. Most of the time, the ability to click outside of the modal box to close is acceptable. The exception to this is in the case of a confirmation message.</p></ol>
+	 <ol><p id="guidelines">Multiple modals should not open on top of each other. Multiple step modals are also not good practice.</p></ol>
+ </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fa fa-close"></i></span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+
+	<div class="modal-body">
+		<div class="container-fluid">
+				<div class="col-md-12 col-sm-12">
+						<br>
+							<p>
+							 This is the body of the modal...
+							</p>
+						<br>
+				</div>
+		</div>
+	</div>
+
+	<div class="modal-footer">
+		<div class="container-fluid">
+ 			 	<div class="col-md-12 col-sm-12">
+ 			 		<div class="row">
+						<p>modal buttons here</p>
+					</div>
+				</div>
+    </div>
+  </div>
+
+   </div>
+  </div>
+ </div>
+</div> <!-- container -->
+ </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"	</script>
+
+<!-- JS - UI Grid Default -->
+<script src="js/main.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="js/ie10-viewport-bug-workaround.js"></script>
+<!-- JS - UI Grid Default -->
+</html>

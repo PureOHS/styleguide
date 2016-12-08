@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+
+    <title>PureOHS Style Guide</title>
+
+    <!-- CSS - Bootstrap -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css">
+
+    <!-- CSS - Font Awesome -->
+    <link rel="stylesheet" href="font-awesome-4.4.0/css/font-awesome.min.css" type="text/css">
+
+    <!-- CSS - UI Grid -->
+    <link rel="stylesheet" href="node_modules/angular-ui-grid/ui-grid.min.css" type="text/css">
+
+	<!-- Font - Google -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Source+Sans+Pro:300,400,700" rel="stylesheet">
+
+	<!-- CSS - Select2 -->
+	<link rel="stylesheet" href="select2/select2-3.5.2/select2.css" type="text/css">
+
+	<!-- CSS - Select2 Bootstrap -->
+	<link rel="stylesheet" href="select2/select2-css-bootstrap3/select2-bootstrap.css" type="text/css">
+
+	<!-- CSS - PureOHS Custom -->
+	<link rel="stylesheet" href="styles/PureOHS-style-guide.css" type="text/css">
+	<link rel="stylesheet" href="styles/PureOHS-theme.css" type="text/css">
+
+    <!-- JS - UI Grid Default -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-touch.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-animate.js"></script>
+    <script src="http://ui-grid.info/docs/grunt-scripts/csv.js"></script>
+    <script src="http://ui-grid.info/docs/grunt-scripts/pdfmake.js"></script>
+    <script src="http://ui-grid.info/docs/grunt-scripts/vfs_fonts.js"></script>
+    <script src="node_modules/angular-ui-grid/ui-grid.js"></script>
+
+    <!-- JS - UI Grid Custom -->
+    <script src="js/app.js"></script>
+
+</head>
+
+<body class="style-guide">
+
+	<!-- Fixed navbar -->
+	<nav class="navbar navbar-fixed-top">
+
+		<div class="pohs-nav-top-1">
+			<div class="container">
+
+				<div class="navbar-header">
+					<a class="navbar-brand" href="index.html"><img src="img/logo-PureOHS-white.svg" alt="PureOHS" height="18" width="89"></a>
+				</div>
+				<div id="navbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href class="navbar-brand right"><img src="img/logo-UL-white.svg" alt="PureOHS" height="28" width="28"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+<div class="container">
+ <div class="row">
+	<div class="col-sm-2 col-md-2">
+				<div class="tabbable tabs-left">
+					<ul class="nav nav-pills nav-stacked">
+						<li role="presentation"><a href="index.html" id="left-nav">Typography</a></li>
+						<li role="presentation"><a href="colors.html" id="left-nav">Color Palette</a></li>
+  					<li role="presentation" class="active"><a href="icons.html">Icons</a></li>
+  					<li role="presentation"><a href="form_elements.html" id="left-nav">Form Elements</a></li>
+						<li role="presentation"><a href="grid.html" id="left-nav">Grid</a></li>
+						<li role="presentation"><a href="tabs.html" id="left-nav">Tabs</a></li>
+  					<li role="presentation"><a href="modal_dialog.html" id="left-nav">Modals</a></li>
+					</ul>
+				</div>
+	</div>
+
+  <div class="tab-content">
+   <div class="tab-pane active" id="b">
+     <div class="col-sm-10 col-md-10">
+      <h3>Icons</h3>
+       <div class="panel panel-default">
+         <div class="panel-body style-guide">
+
+           <div class="style-guide-example">
+             <div class="example text-uppercase">example</div>
+             <div class="row">
+               <div class="col-md-3 col-sm-3">
+                 <i class="fa fa-question-circle"></i> &nbsp; question-circle
+               </div>
+               <div class="col-md-3 col-sm-3">
+                 <i class="fa fa-search"></i> &nbsp; search
+               </div>
+               <div class="col-md-3 col-sm-3">
+                 <i class="fa fa-star"></i> &nbsp; star
+               </div>
+               <div class="col-md-3 col-sm-3">
+                 <i class="fa fa-cog"></i> &nbsp; cog
+               </div>
+               <div class="col-md-3 col-sm-3">
+                 <i class="fa fa-sign-out"></i> &nbsp; sign-out
+               </div>
+               <div class="col-md-3 col-sm-3">
+                 <i class="fa fa-columns"></i> &nbsp; columns
+               </div>
+               <div class="col-md-3 col-sm-3">
+                 <i class="fa fa-plus"></i> &nbsp; plus
+               </div>
+               <div class="col-md-3 col-sm-3">
+                 <i class="fa fa-refresh"></i> &nbsp; refresh
+               </div>
+               <div class="col-md-3 col-sm-3">
+                 <i class="fa fa-times"></i> &nbsp; times
+               </div>
+               <div class="col-md-3 col-sm-3">
+                 <i class="fa fa-check"></i> &nbsp; check
+               </div>
+               <div class="col-md-3 col-sm-3">
+                 <i class="fa fa-user"></i> &nbsp; user
+               </div>
+               <div class="col-md-3 col-sm-3">
+                 <i class="fa fa-chevron-up"></i> &nbsp; chevron-up
+               </div>
+               <div class="col-md-3 col-sm-3">
+                 <i class="fa fa-chevron-right"></i> &nbsp; chevron-right
+               </div>
+               <div class="col-md-3 col-sm-3">
+                 <i class="fa fa-chevron-down"></i> &nbsp; chevron-down
+               </div>
+               <div class="col-md-3 col-sm-3">
+                 <i class="fa fa-chevron-left"></i> &nbsp; chevron-left
+               </div>
+               <div class="col-md-3 col-sm-3">
+                 <i class="fa fa-external-link"></i> &nbsp; external link
+               </div>
+             </div>
+
+             <div class="row">
+               <div class="col-md-3 col-sm-3">
+                 <i class="fa fa-link"></i> &nbsp; link
+               </div>
+               <div class="col-md-3 col-sm-3">
+                 <i class="fa fa-briefcase "></i> &nbsp; case
+               </div>
+               <div class="col-md-3 col-sm-3">
+                 <i class="fa fa-print"></i> &nbsp; print
+               </div>
+               <div class="col-md-3 col-sm-3">
+                 <i class="fa fa-exclamation"></i> &nbsp; exclamation
+               </div>
+               <div class="col-md-3 col-sm-3">
+                 <i class="fa fa-trash-o"></i> &nbsp; trash can
+               </div>
+               <div class="col-md-3 col-sm-3">
+                 <i class="fa fa-calendar"></i> &nbsp; calendar
+               </div>
+               <div class="col-md-3 col-sm-3">
+                 <i class="fa fa-file-text-o"></i> &nbsp; person record
+               </div>
+               <div class="col-md-3 col-sm-3">
+                 <i class="fa fa-fire-extinguisher"></i> &nbsp; safety record
+               </div>
+             </div>
+
+             <div class="row">
+               <div class="col-md-3 col-sm-3">
+                 <i class="fa fa-heartbeat"></i> &nbsp; medical chart
+               </div>
+               <div class="col-md-3 col-sm-3">
+                 <i class="fa fa-filter"></i> &nbsp; filter
+               </div>
+               <div class="col-md-3 col-sm-3">
+                 <i class="fa fa-battery-empty"></i> &nbsp; empty battery
+               </div>
+               <div class="col-md-3 col-sm-3">
+                 <i class="fa fa-battery-quarter"></i> &nbsp; quarter-full battery
+               </div>
+             </div>
+
+             <div class="row">
+               <div class="col-md-3 col-sm-3">
+                 <i class="fa fa-battery-half"></i> &nbsp; half battery
+               </div>
+               <div class="col-md-3 col-sm-3">
+                 <i class="fa fa-battery-three-quarters"></i> &nbsp; three-quarters battery
+               </div>
+               <div class="col-md-3 col-sm-3">
+                 <i class="fa fa-battery-full"></i> &nbsp; full battery
+               </div>
+             </div>
+
+
+
+           </div>
+				<div class="col-md-7 col-sm-7">
+	 				<h4 id="icon">Sample Code</h4>
+           <div class="style-guide-code">
+             <pre class="prettyprint ">
+&lt;i class=&quot;fa fa-question-circle&quot;&gt;&lt;/i&gt;
+             </pre>
+           </div>
+				</div>
+
+				<div class="col-md-5 col-sm-5">
+					<h4 id="icon">Usage Guidelines</h4>
+					<ol><p id="guidelines">All icons come from <a href="http://fontawesome.io/icons/">Font Awesome.</a></p></ol>
+					<ol><p id="guidelines">Use icons to visually present actionable options as replacement of words.</p></ol>
+					<ol><p id="guidelines">Using an icon without a label is generally discouraged. Only use this approach when the icons are universally understood (ie. print, close, trash, copy, cog).</p></ol>
+				</div>
+         </div>
+       </div>
+     </div>
+   </div>
+</div>
+ </div>
+ </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"	</script>
+
+<!-- JS - UI Grid Default -->
+<script src="main.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="js/ie10-viewport-bug-workaround.js"></script>
+</html>

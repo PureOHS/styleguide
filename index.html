@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+
+    <title>PureOHS Style Guide</title>
+
+    <!-- CSS - Bootstrap -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css">
+
+    <!-- CSS - Font Awesome -->
+    <link rel="stylesheet" href="font-awesome-4.4.0/css/font-awesome.min.css" type="text/css">
+
+    <!-- CSS - UI Grid -->
+    <link rel="stylesheet" href="node_modules/angular-ui-grid/ui-grid.min.css" type="text/css">
+
+	<!-- Font - Google -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Source+Sans+Pro:300,400,700" rel="stylesheet">
+
+  <!-- Select2 Files -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+
+	<!-- CSS - Select2 Bootstrap -->
+	<link rel="stylesheet" href="select2/select2-css-bootstrap3/select2-bootstrap.css" type="text/css">
+
+	<!-- CSS - PureOHS Custom -->
+	<link rel="stylesheet" href="styles/PureOHS-style-guide.css" type="text/css">
+	<link rel="stylesheet" href="styles/PureOHS-theme.css" type="text/css">
+
+    <!-- JS - UI Grid Default -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-touch.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-animate.js"></script>
+    <script src="http://ui-grid.info/docs/grunt-scripts/csv.js"></script>
+    <script src="http://ui-grid.info/docs/grunt-scripts/pdfmake.js"></script>
+    <script src="http://ui-grid.info/docs/grunt-scripts/vfs_fonts.js"></script>
+    <script src="node_modules/angular-ui-grid/ui-grid.js"></script>
+
+    <!-- JS - UI Grid Custom -->
+    <script src="js/app.js"></script>
+
+</head>
+
+<body class="style-guide">
+
+	<!-- Fixed navbar -->
+	<nav class="navbar navbar-fixed-top">
+		<div class="pohs-nav-top-1">
+			<div class="container">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="index.html"><img src="img/logo-PureOHS-white.svg" alt="PureOHS" height="18" width="89"></a>
+				</div>
+				<div id="navbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href class="navbar-brand right"><img src="img/logo-UL-white.svg" alt="PureOHS" height="28" width="28"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+<div class="container">
+ <div class="row">
+	<div class="col-sm-2 col-md-2">
+				<div class="tabbable tabs-left">
+					<ul class="nav nav-pills nav-stacked">
+						<li role="presentation" class="active"><a href="index.html">Typography</a></li>
+						<li role="presentation"><a href="colors.html" id="left-nav">Color Palette</a></li>
+  					<li role="presentation"><a href="icons.html" id="left-nav">Icons</a></li>
+  					<li role="presentation"><a href="form_elements.html" id="left-nav">Form Elements</a></li>
+						<li role="presentation"><a href="grid.html" id="left-nav">Grid</a></li>
+						<li role="presentation"><a href="tabs.html" id="left-nav">Tabs</a></li>
+  					<li role="presentation"><a href="modal_dialog.html" id="left-nav">Modals</a></li>
+					</ul>
+				</div>
+	</div>
+
+						 <div class="col-sm-10 col-md-10">
+							 <h3>Typefaces</h3>
+								<h4>The Sans</h4>
+		 						<div class="panel panel-default">
+		 							<div class="panel-body style-guide">
+		 								<div class="style-guide-example">
+		 									<div class="example text-uppercase">example</div>
+											 <div class="row">
+											  <div class="col-sm-4 col-md-4">
+												 <p class="large_source_sans_pro">A a</p>
+											  </div>
+											<div class="col-sm-8 col-md-8">
+										 <br>
+										 <br>
+										 <p id="large_source_sans_pro">Here is some text in The Sans. This font styling should be only used for primary <code>h3</code> page headers.</p>
+											</div>
+										</div>
+		 								</div>
+		 							</div>
+		 						</div>
+
+
+								<h4>Open Sans</h4>
+								<div class="panel panel-default">
+									<div class="panel-body style-guide">
+										<div class="style-guide-example">
+											<div class="example text-uppercase">example</div>
+											 <div class="row">
+											  <div class="col-sm-4 col-md-4">
+											 	 <p class="large_open_sans">A a</p>
+											 </div>
+											 <div class="col-sm-8 col-md-8">
+											<br>
+											<br>
+											<p>Here is some text in Open Sans. This font styling should be used for sub-headers and body text.</p>
+
+											<p>This is another paragraph showing the Open Sans styling. The standard font size for page body text is <code>font-size: 14px</code> and the color should be <code>color: #000</code>.</p>
+											 </div>
+										 </div>
+										</div>
+									</div>
+								</div>
+<!--
+								<h4>Open Sans</h4>
+								<div class="panel panel-default">
+									<div class="panel-body style-guide">
+										<div class="style-guide-example">
+											<div class="example text-uppercase">example</div>
+											 <div class="row">
+											  <div class="col-sm-4 col-md-4">
+											 	 <p class="large_open_sans">A a</p>
+											 </div>
+											 <div class="col-sm-8 col-md-8">
+											<br>
+											<br>
+											<p id="open_sans">Here is some text in open sans. We use this font as a support to Roboto and Helvetica Neue.</p>
+
+											<p id="open_sans">This is another paragraph showing the Open Sans font styling.</p>
+											 </div>
+										 </div>
+										</div>
+									</div>
+								</div> -->
+
+								<h3>Links</h3>
+								<div class="panel panel-default">
+									<div class="panel-body style-guide">
+										<div class="style-guide-example">
+											<div class="example text-uppercase">example</div>
+												<p><a href="">Hyperlink</a></p>
+												<p><a href="">External link<i class="fa fa-external-link" aria-hidden="true" style="margin-left: 5px;"></i></a></p>
+												<p><a class="visited" href="">This</a> is a visited link</p>
+										</div>
+
+									<div class="col-md-7 col-sm-7">
+									 <h4 id="sample">Sample Code</h4>
+										<div class="style-guide-code">
+										 		<pre class="prettyprint">
+&lt;p&gt;&lt;a href=&quot;&quot;&gt;Hyperlink&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;&quot;&gt;External link&lt;i class=&quot;fa fa-external-link&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;visited&quot; href=&quot;&quot;&gt;This&lt;/a&gt; is a visited link&lt;/p&gt;
+										 		</pre>
+											</div>
+										</div>
+
+								<div class="col-md-5 col-sm-5">
+	 								<h4>Usage Guidelines</h4>
+									<ol><p id="guidelines">Links should be obvious and clickable to the user. Blue is the preferred color.</p></ol>
+									<ol><p id="guidelines">If a link needs to open to a new browser tab or window, include the Font Awesome external link icon <code>i class= fa fa-external-link</code>.</p></ol>
+	 							</div>
+
+									</div>
+								</div>
+		 					</div>
+ </div>
+</div>
+
+    <!-- Bootstrap core JavaScript -->
+	<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+
+    <script type="text/javascript">
+			'use strict';
+
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+			$('[data-toggle="popover"]').popover();
+			$('body').scrollspy({ target: '#style-guide-sideNav' })
+
+			$(function(){
+				$('[rel="popover"]').popover({
+					container: 'body',
+					html: true,
+					content: function () {
+						var clone = $($(this).data('popover-content')).clone(true).removeClass('hide');
+						return clone;
+					}
+				}).click(function(e) {
+					e.preventDefault();
+				});
+			});
+
+			$('.collapse_toggle').on('click', function() {
+				$(this).toggleClass('fa-chevron-down fa-chevron-up');
+			});
+
+
+			 $('select').select2();
+        })
+    </script>
+
+</body>
+</html>

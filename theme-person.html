@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+
+    <title>PureOHS</title>
+
+    <!-- CSS - Bootstrap -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css">
+
+    <!-- CSS - Font Awesome -->
+    <link rel="stylesheet" href="font-awesome-4.4.0/css/font-awesome.min.css" type="text/css">
+
+    <!-- CSS - UI Grid -->
+    <link rel="stylesheet" href="ui-grid/ui-grid.min.css" type="text/css">
+
+	<!-- Font - Google -->
+	<link href='http://fonts.googleapis.com/css?family=Roboto:100,300,400' rel='stylesheet' type='text/css'>
+
+	<!-- CSS - Select2 -->
+	<link rel="stylesheet" href="select2/select2-3.5.2/select2.css" type="text/css">
+
+	<!-- CSS - Select2 Bootstrap -->
+	<link rel="stylesheet" href="select2/select2-css-bootstrap3/select2-bootstrap.css" type="text/css">
+
+	<!-- CSS - PureOHS Custom -->
+	<link rel="stylesheet" href="styles/PureOHS-theme.css" type="text/css">
+
+    <!-- JS - UI Grid Default -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-touch.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-animate.js"></script>
+    <script src="http://ui-grid.info/docs/grunt-scripts/csv.js"></script>
+    <script src="http://ui-grid.info/docs/grunt-scripts/pdfmake.js"></script>
+    <script src="http://ui-grid.info/docs/grunt-scripts/vfs_fonts.js"></script>
+    <script src="ui-grid/ui-grid.js"></script>
+
+    <!-- JS - UI Grid Custom -->
+    <script src="js/app.js"></script>
+
+</head>
+
+<body class="nav-sub nav-bottom">
+
+	<!-- Fixed navbar -->
+	<nav class="navbar navbar-fixed-top">
+
+		<div class="pohs-nav-top-1">
+			<div class="container">
+
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="theme-dashboard.html"><img src="img/logo-PureOHS-white.svg" alt="PureOHS" height="18" width="89"></a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="theme-dashboard.html">Dashboard</a></li>
+						<li><a href="theme-encounters.html">Encounters</a></li>
+						<li><a href="theme-reports.html">Reports</a></li>
+
+						<li class="active dropdown">
+							<a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Manage <span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="">Companies</a></li>
+								<li class="active"><a href="theme-people.html">People</a></li>
+								<li><a href="">Programs</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-cog fa-lg"></i></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="">eForms</a></li>
+								<li><a href="">Orders</a></li>
+								<li><a href="">System Config</a></li>
+								<li><a href="">Users</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-sign-out fa-lg"></i></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="">My Profile</a></li>
+								<li><a href="theme-login.html">Sign Out</a></li>
+							</ul>
+						</li>
+						<li><a href=""><i class="fa fa-question-circle fa-lg"></i></a></li>
+						<li><a href="" class="navbar-brand right"><img src="img/logo-Ul-white.svg" alt="PureOHS" height="28" width="28"></a></li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="pohs-nav-top-2">
+			<div class="container">
+				<h3><a href="theme-people.html">People</a> <i class="fa fa-angle-right"></i> Jordan, Michael</h3>
+			</div>
+		</div>
+
+		<div class="pohs-nav-top-3">
+			<div class="container">
+
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#demographics" aria-controls="demographics" role="tab" data-toggle="tab">Demographics</a></li>
+					<li role="presentation"><a href="#work" aria-controls="work" role="tab" data-toggle="tab">Work History</a></li>
+					<li role="presentation"><a href="#emergency" aria-controls="emergency" role="tab" data-toggle="tab">Emergency Contacts</a></li>
+					<li role="presentation"><a href="#resources" aria-controls="resources" role="tab" data-toggle="tab">Resources</a></li>
+				</ul>
+
+			</div>
+		</div>
+
+	</nav>
+
+
+    <div class="container">
+
+		<!-- START tab panes -->
+		<div class="tab-content">
+
+
+			<!-- START demographics -->
+			<div role="tabpanel" class="tab-pane active" id="demographics">
+
+				<h3>Personal Information</h3>
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="panel panel-default">
+							<div class="panel-body">
+
+								<div class="row">
+									<div class="col-md-3 col-sm-6 form-group">
+										<label>Prefix</label>
+										<select class="form-control select2">
+											<option></option>
+											<option>Mr.</option>
+											<option>Mrs.</option>
+										</select>
+									</div>
+									<div class="col-md-3 col-sm-6 form-group">
+										<label class="control-label required">Last Name</label>
+										<input type="" class="form-control" placeholder="">
+									</div>
+									<div class="col-md-3 col-sm-6 form-group">
+										<label class="control-label required">First Name</label>
+										<input type="" class="form-control" placeholder="">
+									</div>
+									<div class="col-md-3 col-sm-6 form-group">
+										<label>Middle Name</label>
+										<input type="" class="form-control" placeholder="">
+									</div>
+									<div class="col-md-3 col-sm-6 form-group">
+										<label>Suffix</label>
+										<select class="form-control select2">
+											<option></option>
+											<option>Jr.</option>
+											<option>Sr.</option>
+										</select>
+									</div>
+									<div class="col-md-3 col-sm-6 form-group">
+										<label>Preferred Name</label>
+										<input type="" class="form-control" placeholder="">
+									</div>
+									<div class="col-md-3 col-sm-6 form-group">
+										<label>Preferred Language</label>
+										<select class="form-control select2">
+											<option></option>
+											<option>English</option>
+											<option>Spanish</option>
+										</select>
+									</div>
+									<div class="col-md-3 col-sm-6 form-group">
+										<label>Race</label>
+										<select class="form-control select2">
+											<option></option>
+											<option>Black</option>
+											<option>White</option>
+										</select>
+									</div>
+									<div class="col-md-3 col-sm-6 form-group">
+										<label>Ethnicity</label>
+										<select class="form-control select2">
+											<option></option>
+											<option>Hispanic or Latino</option>
+											<option>Not Hispanic or Latino</option>
+										</select>
+									</div>
+									<div class="col-md-3 col-sm-6 form-group">
+										<label>Marrital Status</label>
+										<select class="form-control select2">
+											<option></option>
+											<option>Married</option>
+											<option>Single</option>
+										</select>
+									</div>
+									<div class="col-md-3 col-sm-6 form-group">
+										<label>Maiden Name</label>
+										<input type="" class="form-control" placeholder="">
+									</div>
+									<div class="col-md-3 col-sm-6 form-group">
+										<label>Gender</label>
+										<select class="form-control select2">
+											<option></option>
+											<option>Female</option>
+											<option>Male</option>
+											<option>Other</option>
+										</select>
+									</div>
+									<div class="col-md-3 col-sm-6 form-group">
+										<label>Date of Birth</label>
+										<input type="" class="form-control" placeholder="mm.dd.yyyy">
+									</div>
+									<div class="col-md-3 col-sm-6 form-group">
+										<label>Date of Death</label>
+										<input type="" class="form-control" placeholder="mm.dd.yyyy">
+									</div>
+									<div class="col-md-12 col-sm-12">
+										<div class="form-group">
+											<label class="control-label">Note</label>
+											<textarea class="form-control" rows="3"></textarea>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="pull-left btn-header">
+							<button class="btn btn-default btn-icon" type="button" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus"></i></button>
+						</div>
+						<div class="pull-left">
+							<h3>Addresses</h3>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="panel panel-default">
+
+							<div class="panel-body">
+
+								<div class="panel-remove">
+									<div class="panel-actions">
+										<ul class="list-group">
+											<li class="list-group-item">
+												<button class="btn btn-default btn-icon btn-icon-danger" type="submit"><i class="fa fa-trash-o"></i></button>
+											</li>
+											<li class="list-group-item">
+												<button class="btn btn-default btn-icon btn-icon-success" type="submit"><i class="fa fa-star"></i></button>
+											</li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-md-11 col-sm-11">
+										<div class="row">
+											<div class="col-md-8 col-sm-8 form-group">
+												<label>Address Line 1</label>
+												<input type="" class="form-control" placeholder="">
+											</div>
+											<div class="col-md-4 col-sm-4 form-group">
+												<label>Type</label>
+												<select class="form-control select2">
+													<option></option>
+													<option>Home</option>
+													<option>Work</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-md-11 col-sm-11">
+										<div class="row">
+											<div class="col-md-8 col-sm-8 form-group">
+												<label>Address Line 2</label>
+												<input type="" class="form-control" placeholder="">
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-md-11 col-sm-11">
+										<div class="row">
+											<div class="col-md-3 col-sm-6 form-group">
+												<label>City</label>
+												<input type="" class="form-control" placeholder="">
+											</div>
+											<div class="col-md-3 col-sm-6 form-group">
+												<label>State</label>
+												<select class="form-control select2">
+													<option></option>
+													<option>Alabama</option>
+													<option>Alaska</option>
+													<option>Arizona</option>
+													<option>Arkansas</option>
+												</select>
+											</div>
+											<div class="col-md-3 col-sm-6 form-group">
+												<label>Zip</label>
+												<input type="" class="form-control" placeholder="">
+											</div>
+											<div class="col-md-3 col-sm-6 form-group">
+												<label>Country</label>
+												<select class="form-control select2">
+													<option></option>
+													<option>Canada</option>
+													<option>Mexico</option>
+													<option>United States</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="pull-left btn-header">
+							<button class="btn btn-default btn-icon" type="submit"><i class="fa fa-plus"></i></button>
+						</div>
+						<div class="pull-left">
+							<h3>Phone Numbers</h3>
+						</div>
+					</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="pull-left btn-header">
+							<button class="btn btn-default btn-icon" type="submit"><i class="fa fa-plus"></i></button>
+						</div>
+						<div class="pull-left">
+							<h3>Emails</h3>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="panel panel-default">
+							<div class="panel-body">
+
+								<div class="panel-remove">
+									<div class="panel-actions">
+										<ul class="list-group">
+											<li class="list-group-item">
+												<button class="btn btn-default btn-icon btn-icon-danger" type="submit"><i class="fa fa-trash-o"></i></button>
+											</li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-md-11 col-sm-11">
+										<div class="row">
+											<div class="col-md-3 col-sm-4 form-group">
+												<label class="control-label">Type</label>
+												<select class="form-control select2">
+													<option></option>
+													<option>Home</option>
+													<option>Work</option>
+												</select>
+											</div>
+											<div class="col-md-6 col-sm-6 form-group">
+												<label>Address</label>
+												<input type="" class="form-control" placeholder="">
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="panel panel-default">
+							<div class="panel-body">
+
+								<div class="panel-remove">
+									<div class="panel-actions">
+										<ul class="list-group">
+											<li class="list-group-item">
+												<button class="btn btn-default btn-icon btn-icon-danger" type="submit"><i class="fa fa-trash-o"></i></button>
+											</li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-md-11 col-sm-11">
+										<div class="row">
+											<div class="col-md-3 col-sm-4 form-group">
+												<label class="control-label">Type</label>
+												<select class="form-control select2">
+													<option></option>
+													<option>Home</option>
+													<option>Work</option>
+												</select>
+											</div>
+											<div class="col-md-6 col-sm-6 form-group">
+												<label>Address</label>
+												<input type="" class="form-control" placeholder="">
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="pull-left btn-header">
+							<button class="btn btn-default btn-icon" type="submit"><i class="fa fa-plus"></i></button>
+						</div>
+						<div class="pull-left">
+							<h3>Driver's Licenses</h3>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="panel panel-default">
+							<div class="panel-body">
+
+								<div class="panel-remove">
+									<div class="panel-actions">
+										<ul class="list-group">
+											<li class="list-group-item">
+												<button class="btn btn-default btn-icon btn-icon-danger" type="submit"><i class="fa fa-trash-o"></i></button>
+											</li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-md-11 col-sm-11">
+										<div class="row">
+											<div class="col-md-3 col-sm-5 form-group">
+												<label class="control-label required">Number</label>
+												<input type="" class="form-control" placeholder="">
+											</div>
+											<div class="col-md-3 col-sm-3 form-group">
+												<label>State</label>
+												<select class="form-control select2">
+													<option></option>
+													<option>Alabama</option>
+													<option>Alaska</option>
+													<option>Arizona</option>
+													<option>Arkansas</option>
+												</select>
+											</div>
+											<div class="col-md-3 col-sm-3 form-group">
+												<label class="control-label required">Expiration</label>
+												<input type="" class="form-control" placeholder="mm.dd.yyyy">
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+			</div><!-- ***** END demographics -->
+
+
+			<!-- START work -->
+			<div role="tabpanel" class="tab-pane" id="work">
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="panel panel-default">
+							<div class="panel-body">
+
+								Work History<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div><!-- ***** END work -->
+
+
+			<!-- START emergency -->
+			<div role="tabpanel" class="tab-pane" id="emergency">
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="panel panel-default">
+							<div class="panel-body">
+
+								Emergency Contacts<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div><!-- ***** END emergency -->
+
+
+			<!-- START resources -->
+			<div role="tabpanel" class="tab-pane" id="resources">
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="panel panel-default">
+							<div class="panel-body">
+
+								Resources<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div><!-- ***** END resources -->
+
+
+		</div><!-- ***** END tab panes -->
+
+    </div>
+
+
+	<nav class="navbar navbar-fixed-bottom">
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 col-sm-3 status">
+					<span class="label label-success">Active<span class="fa fa-check"></span></span>
+				</div>
+				<div class="col-md-9 col-sm-9">
+					<div class="btn-bar-right pull-right">
+						<button type="button" class="btn btn-link">Cancel</button>
+						<button type="button" class="btn btn-default">Link External Patient</button>
+						<button type="button" class="btn btn-primary">Save</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</nav>
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="vertical-alignment-helper">
+			<div class="modal-dialog vertical-align-center" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h3 class="modal-title" id="myModalLabel">Add Address</h3>
+				</div>
+				<div class="modal-body">
+
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-12 col-sm-12">
+								<div class="row">
+									<div class="col-md-8 col-sm-8 form-group">
+										<label>Address Line 1</label>
+										<input type="" class="form-control" placeholder="">
+									</div>
+									<div class="col-md-4 col-sm-4 form-group">
+										<label>Type</label>
+										<select class="form-control select2">
+											<option></option>
+											<option>Home</option>
+											<option>Work</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-12 col-sm-12">
+								<div class="row">
+									<div class="col-md-8 col-sm-8 form-group">
+										<label>Address Line 2</label>
+										<input type="" class="form-control" placeholder="">
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-md-12 col-sm-12">
+								<div class="row">
+									<div class="col-md-6 col-sm-6 form-group">
+										<label>City</label>
+										<input type="" class="form-control" placeholder="">
+									</div>
+									<div class="col-md-6 col-sm-6 form-group">
+										<label>State</label>
+										<select class="form-control select2">
+											<option></option>
+											<option>Alabama</option>
+											<option>Alaska</option>
+											<option>Arizona</option>
+											<option>Arkansas</option>
+										</select>
+									</div>
+									<div class="col-md-6 col-sm-6 form-group">
+										<label>Zip</label>
+										<input type="" class="form-control" placeholder="">
+									</div>
+									<div class="col-md-6 col-sm-6 form-group">
+										<label>Country</label>
+										<select class="form-control select2">
+											<option></option>
+											<option>Canada</option>
+											<option>Mexico</option>
+											<option>United States</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-primary">Save</button>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+
+
+    <!-- Bootstrap core JavaScript -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="//select2.github.io/select2/select2-3.5.2/select2.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+	<script type="text/javascript">
+        $(document).ready(function(){
+        	$('#myModal').on('shown.bs.modal', function () {
+				$('#myInput').focus()
+			});
+			$('.select2').select2();
+        });
+    </script>
+
+</body>
+</html>

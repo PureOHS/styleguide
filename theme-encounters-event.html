@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+
+    <title>PureOHS</title>
+
+    <!-- CSS - Bootstrap -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css">
+
+    <!-- CSS - Font Awesome -->
+    <link rel="stylesheet" href="font-awesome-4.4.0/css/font-awesome.min.css" type="text/css">
+
+    <!-- CSS - UI Grid -->
+    <link rel="stylesheet" href="ui-grid/ui-grid.min.css" type="text/css">
+	
+	<!-- Font - Google -->
+	<link href='http://fonts.googleapis.com/css?family=Roboto:100,300,400' rel='stylesheet' type='text/css'>
+	
+	<!-- CSS - Select2 -->
+	<link rel="stylesheet" href="select2/select2-3.5.2/select2.css" type="text/css">
+	
+	<!-- CSS - Select2 Bootstrap -->
+	<link rel="stylesheet" href="select2/select2-css-bootstrap3/select2-bootstrap.css" type="text/css">
+	
+	<!-- CSS - PureOHS Custom -->
+	<link rel="stylesheet" href="styles/PureOHS-theme.css" type="text/css">
+    
+    <!-- JS - UI Grid Default -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-touch.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-animate.js"></script>
+    <script src="http://ui-grid.info/docs/grunt-scripts/csv.js"></script>
+    <script src="http://ui-grid.info/docs/grunt-scripts/pdfmake.js"></script>
+    <script src="http://ui-grid.info/docs/grunt-scripts/vfs_fonts.js"></script>
+    <script src="ui-grid/ui-grid.js"></script>
+    
+    <!-- JS - UI Grid Custom -->
+    <script src="js/app.js"></script>
+
+</head>
+
+<body class="nav-sub">
+
+	<!-- Fixed navbar -->
+	<nav class="navbar navbar-fixed-top">
+		
+		<div class="pohs-nav-top-1">
+			<div class="container">
+			
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="theme-dashboard.html"><img src="img/logo-PureOHS-white.svg" alt="PureOHS" height="18" width="89"></a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="theme-dashboard.html">Dashboard</a></li>
+						<li class="active"><a href="theme-encounters.html">Encounters</a></li>
+						<li><a href="theme-reports.html">Reports</a></li>
+
+						<li class="dropdown">
+							<a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Manage <span class="caret"></span></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="">Companies</a></li>
+								<li><a href="theme-people.html">People</a></li>
+								<li><a href="">Programs</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-cog fa-lg"></i></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="">eForms</a></li>
+								<li><a href="">Orders</a></li>
+								<li><a href="">System Config</a></li>
+								<li><a href="">Users</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-sign-out fa-lg"></i></a>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="">My Profile</a></li>
+								<li><a href="theme-login.html">Sign Out</a></li>
+							</ul>
+						</li>
+						<li><a href=""><i class="fa fa-question-circle fa-lg"></i></a></li>
+						<li><a href="" class="navbar-brand right"><img src="img/logo-Ul-white.svg" alt="PureOHS" height="28" width="28"></a></li>
+					</ul>
+				</div>
+				
+			</div>
+		</div>
+		
+		<div class="pohs-nav-top-2">
+			<div class="container">
+                <h3><a href="theme-encounters.html">Encounters</a> <i class="fa fa-angle-right"></i> Flu Fair 2015</h3>
+			</div>
+		</div>
+		
+		<div class="pohs-nav-top-3">
+			<div class="container">
+			
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs pull-left" role="tablist">
+					<li role="presentation" class="active"><a href="#progress" aria-controls="progress" role="tab" data-toggle="tab">In Progress</a></li>
+					<li role="presentation"><a href="#completed" aria-controls="completed" role="tab" data-toggle="tab">Completed</a></li>
+					<li role="presentation"><a href="#details" aria-controls="details" role="tab" data-toggle="tab">Event Details</a></li>
+				</ul>
+            </div>		
+        </div>
+	</nav>
+	
+
+    <div class="container">
+		
+		<!-- START tab panes -->
+		<div class="tab-content">
+	
+								
+			<!-- START In Progress -->
+			<div role="tabpanel" class="tab-pane active" id="progress">	
+
+				<div class="row row-grid-actions">
+                    <div class="col-md-6 col-sm-6">
+
+                        <div class="pull-left btn-bar-left">
+                            <button class="btn btn-default btn-icon" type="button" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus"></i></button>
+                        </div>
+                        <div class="pull-left has-feedback" style="width: 50%;">
+                            <input class="form-control" type="text" placeholder="Search ...">
+                            <span class="fa fa-search form-control-feedback" aria-hidden="true"></span>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+
+                        <div class="pull-right btn-bar-right">
+                            <button class="btn btn-default btn-icon" type="submit"><i class="fa fa-repeat"></i></button>
+                            <button class="btn btn-default btn-icon" type="submit"><i class="fa fa-columns"></i></button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row row-grid">
+                    <div class="col-md-12">
+
+                        <div class="panel-grid" ng-controller="MainCtrl">
+                            <div id="grid1" ui-grid="gridOptions3" class="ui-grid" ui-grid-selection ui-grid-move-columns ui-grid-pinning></div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row row-grid-nav">
+                    <div class="col-md-6 col-sm-6">
+
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+
+                        <div class="pull-right">
+                            1-2 of 2
+                        </div>
+
+                    </div>
+                </div>			
+
+			</div><!-- ***** END In Progress -->
+
+
+			<!-- START Completed -->
+			<div role="tabpanel" class="tab-pane" id="completed">
+
+				<div class="row row-grid-actions">
+                    <div class="col-md-6 col-sm-6">
+
+                        <div class="pull-left has-feedback" style="width: 50%;">
+                            <input class="form-control" type="text" placeholder="Search ...">
+                            <span class="fa fa-search form-control-feedback" aria-hidden="true"></span>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+
+                        <div class="pull-right btn-bar-right">
+                            <button class="btn btn-default btn-icon" type="submit"><i class="fa fa-repeat"></i></button>
+                            <button class="btn btn-default btn-icon" type="submit"><i class="fa fa-columns"></i></button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row row-grid">
+                    <div class="col-md-12">
+
+                        <div class="panel panel-default" style="height: 370px; margin-bottom: 0px;">
+							<div class="panel-body">
+                                Grid ...   
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row row-grid-nav">
+                    <div class="col-md-6 col-sm-6">
+
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+
+                        <div class="pull-right">
+                            1-25 of 117
+                        </div>
+
+                    </div>
+                </div>
+
+			</div><!-- ***** END Completed -->
+			
+			
+			<!-- START Event Details -->
+			<div role="tabpanel" class="tab-pane" id="details">
+				
+				<div class="row">
+					<div class="col-md-12">
+						<div class="panel panel-default">
+							<div class="panel-body">
+
+								<div class="row">
+                                    <div class="col-md-3 col-sm-4 form-group">
+                                        <label>Label</label>
+                                        <input type="" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="col-md-3 col-sm-4 form-group">
+                                        <label>Label</label>
+                                        <input type="" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="col-md-3 col-sm-4 form-group">
+                                        <label>Label</label>
+                                        <input type="" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="col-md-3 col-sm-4 form-group">
+                                        <label>Label</label>
+                                        <input type="" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="col-md-3 col-sm-4 form-group">
+                                        <label>Label</label>
+                                        <input type="" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="col-md-3 col-sm-4 form-group">
+                                        <label>Label</label>
+                                        <input type="" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="col-md-3 col-sm-4 form-group">
+                                        <label>Label</label>
+                                        <input type="" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="col-md-3 col-sm-4 form-group">
+                                        <label>Label</label>
+                                        <input type="" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="col-md-3 col-sm-4 form-group">
+                                        <label>Label</label>
+                                        <input type="" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="col-md-3 col-sm-4 form-group">
+                                        <label>Label</label>
+                                        <input type="" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="col-md-3 col-sm-4 form-group">
+                                        <label>Label</label>
+                                        <input type="" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="col-md-3 col-sm-4 form-group">
+                                        <label>Label</label>
+                                        <input type="" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="col-md-3 col-sm-4 form-group">
+                                        <label>Label</label>
+                                        <input type="" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="col-md-3 col-sm-4 form-group">
+                                        <label>Label</label>
+                                        <input type="" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="col-md-3 col-sm-4 form-group">
+                                        <label>Label</label>
+                                        <input type="" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="col-md-3 col-sm-4 form-group">
+                                        <label>Label</label>
+                                        <input type="" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="col-md-3 col-sm-4 form-group">
+                                        <label>Label</label>
+                                        <input type="" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="col-md-3 col-sm-4 form-group">
+                                        <label>Label</label>
+                                        <input type="" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="col-md-12 col-sm-12" style="margin-top: 20px;">
+                                        <div class="btn-bar-right pull-right">
+                                            <button type="button" class="btn btn-default">Cancel</button>
+                                            <button type="button" class="btn btn-primary">Save</button>
+                                        </div>
+                                    </div>
+                                </div>	
+
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div><!-- ***** END Event Details -->
+			
+
+		</div><!-- ***** END tab panes -->
+		
+    </div>
+	
+	
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="vertical-alignment-helper">
+			<div class="modal-dialog vertical-align-center" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h3 class="modal-title" id="myModalLabel">Add Event Encounter</h3>
+				</div>
+				<div class="modal-body">
+					
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-12 col-sm-12">
+								<div class="row">
+									<div class="col-md-6 col-sm-6 form-group">
+										<label class="required">Person</label>
+										<select class="form-control select2">
+											<option></option>
+                                            <option>Agassi, Andre</option>
+											<option>Montana, Joe</option>
+                                            <option>Murphy, Eddie</option>
+                                            <option>Ross, Bob</option>
+										</select>
+									</div>
+                                    <div class="col-md-6 col-sm-6 form-group">
+										<label class="required">Company</label>
+										<select class="form-control select2">
+											<option></option>
+                                            <option>Happy Trees</option>
+											<option>Home Depot</option>
+											<option>Publix</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+                        
+                        <div class="row">
+							<div class="col-md-12 col-sm-12">
+								<div class="row">
+									<div class="col-md-12 col-sm-12 form-group">
+										<label>Note</label>
+										<textarea class="form-control" rows="3"></textarea>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="theme-encounters-event-single.html" role="button">Add</a>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+	
+
+    <!-- Bootstrap core JavaScript -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="//select2.github.io/select2/select2-3.5.2/select2.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+	
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+	
+	<script type="text/javascript">
+        $(document).ready(function(){
+        	$('#myModal').on('shown.bs.modal', function () {
+				$('#myInput').focus()
+			});
+			$('.select2').select2();
+        });
+    </script>
+
+</body>
+</html>
