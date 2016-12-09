@@ -1,0 +1,23 @@
+[
+	{
+        "person": "Rambo, John",
+        "encounter": "11.23.2015 03:00 PM",
+        "type": "Flu Vaccination",
+        "staff": "West",
+        "clinic": "Green Hills",
+        "DOB": "05.17.1965",
+        "empID": "823-41-1008",
+        "company": "USA"
+    },
+    {
+        "person": "Knievel, Evel ",
+        "encounter": "11.22.2015 11:00 AM",
+        "type": "Flu Vaccination",
+        "staff": "West",
+        "clinic": "Green Hills",
+        "DOB": "10.17.1938",
+        "empID": "213-87-5631",
+        "company": "USA",
+        "DOB": "01.06.1937"
+    }
+]
