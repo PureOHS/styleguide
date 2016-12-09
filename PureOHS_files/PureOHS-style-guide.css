@@ -1,0 +1,35 @@
+.panel-body.style-guide {
+  padding: 0;
+}
+.style-guide-example {
+  background-color: #fff;
+  padding: 20px 15px;
+}
+.style-guide-example p.example {
+  font-size: 12px;
+  color: #aaa;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+.style-guide-code {
+  border-top: 1px solid #ddd;
+  background-color: #f9f9f9;
+  padding: 15px;
+}
+.style-guide-code pre.prettyprint {
+  border: 0;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+}
+.style-guide-code pre.prettyprint .tag {
+  color: #2f6f9f;
+}
+.style-guide-code pre.prettyprint .atn,
+.style-guide-code pre.prettyprint .pun {
+  color: #4f9fcf;
+}
+.style-guide-code pre.prettyprint .atv {
+  color: #d44950;
+}
